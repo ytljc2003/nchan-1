@@ -24,7 +24,7 @@ done
 # Init dirs
 echo "Build image..."
 # Build api-accounts image
-docker build -t "${name}:${version}" .
+docker.exe build -t "${name}:${version}" .
 echo "Build end"
 
 
