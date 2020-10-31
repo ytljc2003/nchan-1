@@ -14,20 +14,6 @@ cd local
 ./build.sh
 ```
 
-### Build on virtual machine(VM):
-
-```bash
-cd vm
-./build.sh
-```
-
-### Build for Rancher:
-
-```bash
-cd rancher
-./build.sh
-```
-
 ### Push to Docker registry
 
 Login to Docker registry:
@@ -61,33 +47,6 @@ Ctrl+C
 Remove:
 ```bash
 docker-compose down
-```
-
-### Rancher
-
-Run Redis Cluster:
-
-```bash
-cd rancher/redis-cluster
-docker-compose up
-```
-
-Run Nchan:
-
- ```bash
- cd rancher
- docker-compose up
- ```
-
-Available env variables:
-```bash
-REDIS_CLUSTER_PASSWORD=RedisClusterPassword
-API_ACCOUNTS_URL=api-accounts
-NCHAN_KEEPALIVE_TIMEOUT=
-NCHAN_SUB_USER_MESSAGE_BUFFER_LENGTH=
-NCHAN_SUB_SHARED_MESSAGE_BUFFER_LENGTH=
-NCHAN_SUB_USER_UNSUBSCRIBE_REQUEST_COMMENT=#
-NCHAN_SUB_SHARED_UNSUBSCRIBE_REQUEST_COMMENT=#
 ```
 
 ## Demo client:
