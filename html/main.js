@@ -32,7 +32,7 @@
         console.log('onMessage:catch:data:object', result.value);
       }
     }
-    result.el.innerHTML = JSON.stringify(result.value, null, 2);
+    result.el.innerHTML = JSON.stringify(message.data);
     console.log('onMessage:result', result);
   }
 

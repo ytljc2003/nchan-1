@@ -1,31 +1,25 @@
 # nchan.io
 
 Nchan Publish/Subscribe server (Pub/Sub). 
-Original documentation for server on: https://nchan.io/
 
-**Note**: All paths related to root of this repository
+**Note**: 
+#### local/master: run with redis server
+#### local/slave:  run without redis server, need change nginx.nchan.default.conf to set up redis server
+#### html:         copy to nginx html path, test subscribe
+
 
 ## Build
 
 ### Build Locally:
 
 ```bash
-cd local
+cd local/master
 ./build.sh
-```
 
-### Push to Docker registry
+or
 
-Login to Docker registry:
-
-```bash
-docker login -u "USERNAME" -p "PASSWORD or TOKEN"
-```
-
-Push to Docker registry:
-
-```bash
-docker push FULL_NAME_OF_THE_IMAGE
+cd local/slave
+./build.sh
 ```
 
 ## Run
@@ -33,7 +27,11 @@ docker push FULL_NAME_OF_THE_IMAGE
 ### Locally:
 Go to `local` dir
 ```bash
-cd local
+cd local/master
+
+or
+
+cd local/slave
 ```
 Run:
 ```bash
@@ -48,16 +46,3 @@ Remove:
 ```bash
 docker-compose down
 ```
-
-## Demo client:
-
-Install globally:
-
-```bash
-npm i -g http-server
-cd html
-http-server -p 9000
-```
-
-Go to:
-http://127.0.0.1:9000 

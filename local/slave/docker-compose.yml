@@ -1,0 +1,12 @@
+version: '2'
+services:
+  nchan_1:
+    image: rsheremet/pubsub-bus-local:1.1.0
+    ports:
+     - "9123:80"
+     - "9124:443"
+  nchan_2:
+    image: rsheremet/pubsub-bus-local:1.1.0
+    ports:
+     - "9125:80"
+     - "9126:443"
